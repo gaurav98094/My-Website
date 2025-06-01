@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.url == '/' or page.url == site.baseurl or page.permalink == '/' %}Gaurav K{% elsif page.title %}Gaurav K | {{ page.title }}{% else %}Gaurav K{% endif %}</title>
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      overflow-x: hidden;
+      font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 17px;
+      color: #23272f;
+      background: #fcfcfd;
+    }
+    .container {
+      width: 70vw;
+      max-width: 900px;
+      min-width: 320px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+      box-sizing: border-box;
+    }
+    /* Post content styles */
+    .container h1, .container h2, .container h3, .container h4, .container h5, .container h6 {
+      font-weight: 600;
+      color: #23272f;
+      margin-top: 2.2rem;
+      margin-bottom: 1.1rem;
+      line-height: 1.25;
+    }
+    .container h1 { font-size: 2.2rem; }
+    .container h2 { font-size: 1.6rem; }
+    .container h3 { font-size: 1.25rem; }
+    .container h4 { font-size: 1.1rem; }
+    .container p {
+      margin-bottom: 1.1rem;
+      line-height: 1.7;
+    }
+    .container blockquote {
+      border-left: 4px solid #6366f1;
+      background: #f6f8fd;
+      color: #444;
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      font-style: italic;
+      border-radius: 0.5rem;
+    }
+    .container code, .container pre {
+      font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', monospace;
+      background: #f3f4f6;
+      color: #3b5bdb;
+      border-radius: 0.3rem;
+      padding: 0.2em 0.5em;
+      font-size: 0.98em;
+    }
+    .container pre {
+      padding: 1em;
+      overflow-x: auto;
+      margin: 1.2em 0;
+    }
+    .container img {
+      max-width: 100%;
+      border-radius: 0.4rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 16px rgba(99,102,241,0.07);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .container table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: #fff;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.04);
+    }
+    .container th, .container td {
+      padding: 0.7em 1em;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+    }
+    .container th {
+      background: #f4f6fb;
+      font-weight: 600;
+    }
+    .container tr:last-child td {
+      border-bottom: none;
+    }
+    .container ul, .container ol {
+      margin-bottom: 1.2em;
+      padding-left: 1.2em;
+    }
+    .container ul li, .container ol li {
+      margin-bottom: 0.7em;
+      line-height: 1.7;
+    }
+
+  </style>
+</head>
+<body>
+  {% include navbar.html %}
+  <main style="min-height: 80vh;">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html> 

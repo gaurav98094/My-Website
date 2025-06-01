@@ -1,0 +1,44 @@
+# Site settings
+title: "Gaurav K"
+description: "A personal research hub of papers, projects, and ideas. Data Science, ML, NLP, and more."
+author: "Gaurav K"
+url: "https://gaurav98094.github.io"
+baseurl: "/My-Website"
+logo: "/img/me2.png"
+social:
+  name: Gaurav K
+  links:
+    - https://www.linkedin.com/in/gaurav98094/
+    - https://github.com/gaurav98094
+    - https://www.youtube.com/@gauravkds
+
+# Build settings
+markdown: kramdown
+
+# Theme settings
+theme: jekyll-theme-primer
+
+# Plugins (if you use any, like pagination, SEO, etc.)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude unnecessary files/folders if any
+exclude: []
+
+# Optional: default values for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      # categories: papers
+
+# Custom CSS include
+include:
+  - assets/css/custom.css
+

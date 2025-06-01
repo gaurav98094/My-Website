@@ -1,0 +1,226 @@
+Hide the site title in the header
+.site-title, .header .site-title, .masthead .site-title {
+  display: none !important;
+}
+
+/* Professional, consistent link styles for all content */
+.container a, .container ul a, .container li a, .container p a {
+  color: #3b5bdb;
+  text-decoration: none;
+  border-bottom: 1.5px solid #e5e7eb;
+  transition: color 0.18s, border-bottom 0.18s;
+  font-weight: 500;
+}
+.container a:hover, .container ul a:hover, .container li a:hover, .container p a:hover {
+  color: #3b5bdb;
+  border-bottom: 1.5px solid #6366f1;
+  text-decoration: none;
+}
+
+/* Vertical spacing for lists */
+.container ul, .container ol {
+  padding-left: 1.2em;
+}
+.container ul li, .container ol li {
+  margin-bottom: 0.7em;
+  line-height: 1.7;
+}
+
+/* Lighter color for meta info (dates, etc.) */
+.container .meta, .container .date, .container time {
+  color: #8b949e;
+  font-size: 0.98em;
+  font-weight: 400;
+}
+
+/* Consistent top margin for first element in container */
+.container > h1:first-child,
+.container > h2:first-child,
+.container > .hero:first-child,
+.container > ul:first-child,
+.container > p:first-child {
+  margin-top: 2.5rem;
+}
+
+/* Callout boxes */
+.container .callout {
+  border-left: 4px solid #6366f1;
+  background: #f6f8fd;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  font-size: 1.04em;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.04);
+}
+.container .callout.note { border-left-color: #6366f1; }
+.container .callout.tip { border-left-color: #22c55e; background: #f0fdf4; }
+.container .callout.warn { border-left-color: #f59e42; background: #fff7ed; }
+
+
+/* Ensure code blocks are selectable and copiable */
+.container pre {
+  position: relative;
+  padding-right: 4em;
+  user-select: text;
+  margin: 1em 0;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.3em 0.8em;
+  font-size: 0.9em;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+.copy-btn:hover {
+  opacity: 1;
+}
+
+/* Ensure all images in .container are always centered */
+.container img {
+  max-width: 90%;
+  height: auto;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 70vw;
+  max-width: 900px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.container h1, .container h2, .container h3, .container h4, .container h5, .container h6 {
+  text-align: left;
+  margin-top: 2.2rem;
+  margin-bottom: 1.1rem;
+  line-height: 1.25;
+}
+
+.container p, .container ul, .container ol, .container blockquote, .container pre, .container table {
+  text-align: left;
+}
+
+.container img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.list-title {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.99rem;
+}
+.list-date {
+  color: #8b949e;
+  font-size: 0.93em;
+  margin-left: 0.7em;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', monospace;
+}
+@media (max-width: 600px) {
+  .list-date {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .post-tags {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .post-tag {
+    font-size: 0.93rem;
+    padding: 0.13em 0.7em;
+    margin-bottom: 0.2em;
+  }
+  .toc {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.98rem;
+    overflow-x: auto;
+  }
+  .toc ul {
+    padding-left: 0.7em;
+  }
+  .container table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.98rem;
+  }
+  .container th, .container td {
+    padding: 0.5em 0.6em;
+  }
+  .container pre {
+    font-size: 0.97em;
+    padding: 0.7em 0.4em 0.7em 0.7em;
+    margin: 0.7em 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .container .callout {
+    padding: 0.7rem 0.7rem;
+    font-size: 0.99em;
+  }
+  .container blockquote {
+    padding: 0.7rem 0.7rem;
+    font-size: 0.99em;
+  }
+  .container ul, .container ol {
+    padding-left: 1em;
+  }
+}
+
+html, body, .container {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+  color: #000 !important;
+}
+
+.toc {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.container p, .container ul, .container ol, .container blockquote, .container pre, .container table, .container h1, .container h2, .container h3, .container h4, .container h5, .container h6 {
+  color: #000 !important;
+}
+
+/* Ensure code blocks have a grey background and use a monospace font */
+.container code {
+  display: block;
+  background-color: #f5f5f5;
+  font-family: 'Fira Code', 'JetBrains Mono', 'SFMono-Regular', 'Menlo', 'Consolas', 'Liberation Mono', monospace;
+  padding: 1rem;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  /* padding: 1em; */ 
+} 

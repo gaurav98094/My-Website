@@ -1,0 +1,157 @@
+<style>
+.topnav {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 0 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: inherit;
+  margin-bottom: 1.2rem;
+}
+.topnav-inner {
+  width: 70vw;
+  max-width: 900px;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.6rem;
+  border-bottom: 1.5px solid #e5e7eb;
+}
+.topnav-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+.topnav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.topnav-links a {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.13rem;
+  position: relative;
+  padding: 0.48rem 1.45rem 0.48rem 1.45rem;
+  border-radius: 0.7rem;
+  background: transparent;
+  transition: color 0.18s, background 0.18s;
+}
+.topnav-links a:hover, .topnav-links a:focus {
+  color: #6366f1;
+  background: #f4f6fb;
+}
+.topnav-links a.active, .topnav-links a[aria-current="page"] {
+  color: #6366f1;
+  font-weight: 500;
+  background: #f4f6fb;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-left: 0.5rem;
+}
+.hamburger span {
+  height: 4px;
+  width: 28px;
+  background: #6366f1;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+  display: block;
+}
+@media (max-width: 600px) {
+  .topnav-inner {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0;
+  }
+  .topnav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+    padding: 1rem 1.2rem 1.2rem 1.2rem;
+    box-shadow: 0 8px 32px rgba(99,102,241,0.07);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    z-index: 999;
+    display: none;
+  }
+  .topnav-links.open {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .topnav-links a {
+    font-size: 1.08rem;
+    padding: 0.7rem 0.7rem;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .topnav-title {
+    font-size: 1.08rem;
+  }
+}
+</style>
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="{{ '/' | relative_url }}" class="topnav-title">Gaurav K</a>
+    <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="topnav-links" id="mobile-nav">
+      <a href="{{ '/blogs/' | relative_url }}" {% if page.url == '/blogs/' %}class="active" aria-current="page"{% endif %}>Blogs</a>
+      <a href="{{ '/papers/' | relative_url }}" {% if page.url == '/papers/' %}class="active" aria-current="page"{% endif %}>Papershelf</a>
+      <a href="{{ '/bookshelf/' | relative_url }}" {% if page.url == '/bookshelf/' %}class="active" aria-current="page"{% endif %}>Bookshelf</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.topnav-links');
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+    var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+  // Close menu on link click (mobile)
+  document.querySelectorAll('.topnav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 600) {
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      }
+    });
+  });
+});
+</script> 
