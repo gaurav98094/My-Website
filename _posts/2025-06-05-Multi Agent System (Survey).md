@@ -15,12 +15,12 @@ image: /images/image1.png
 
 **Note** : Paper is paper from 2018
 
-## 📝 **Abstract**
+## 📝 Abstract
 Multi-Agent Systems (MAS) involve autonomous agents working collaboratively to solve complex problems. These systems face challenges like coordination, communication, task allocation, and security. This paper gives a holistic view of all these aspects with theoretical and structural insights.
 
 ---
 
-## **Introduction**
+## Introduction
 Distributed AI can be grouped into:
 
 1. **Parallel AI**
