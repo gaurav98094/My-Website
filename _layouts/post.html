@@ -85,11 +85,11 @@
     document.addEventListener('DOMContentLoaded', function() {
       // Fix TOC links to match actual heading IDs
       document.querySelectorAll('.toc a').forEach(function(link) {
-        var targetText = link.textContent.trim().replace(/[\u{1F300}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '').replace(/\s+/g, ' ').toLowerCase();
+        var targetText = link.textContent.trim().replace(/\s+/g, ' ').toLowerCase();
         var found = false;
-        document.querySelectorAll('.container h2').forEach(function(h) {
-          var headingText = h.textContent.trim().replace(/[\u{1F300}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '').replace(/\s+/g, ' ').toLowerCase();
-          if (!found && headingText === targetText) {
+        document.querySelectorAll('.container h2, .container h3').forEach(function(h) {
+          var headingText = h.textContent.trim().replace(/\s+/g, ' ').toLowerCase();
+          if (!found && headingText.includes(targetText)) {
             link.setAttribute('href', '#' + h.id);
             found = true;
           }
