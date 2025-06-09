@@ -10,8 +10,8 @@ permalink: /bookshelf/
 
 <ul>
   <li>
-    <a href="#" target="_blank" class="list-title">
-      Coming
+    <a href="https://www.google.co.in/books/edition/The_Art_of_Impossible/luTdDwAAQBAJ?hl=en&gbpv=0" target="_blank" class="list-title">
+      The Art of Impossible : Steven Kotler
     </a>
   </li>
   <!-- Add more books below in the same format -->
