@@ -102,3 +102,59 @@ MAS are characterized by:
 
 - **Mobility** : Agents can be stationary or capable of moving within and interacting across the environment.
 
+
+
+### 3. **Fault Detection and Robustness**
+
+Fault detection ensures the MAS continues operating despite agent failures.
+
+* Use of unknown observers or anomaly detection methods to identify malfunctioning agents.
+* Robust MAS design often includes fault tolerance, redundancy, and self-healing mechanisms.
+
+
+
+### 4. **Task Allocation**
+
+Assigning tasks efficiently to agents based on their capabilities and environmental factors.
+
+* **Centralized**: A master controller allocates tasks, which may create a bottleneck.
+* **Decentralized**: Agents self-organize to distribute tasks, enhancing scalability and fault tolerance.
+* **Metrics for Allocation**:
+
+  * Agent capabilities or "talent"
+  * Physical or logical proximity to the task
+  * Energy or resource constraints
+
+
+
+### 5. **Agent Organization**
+
+The structural design that defines how agents interact, communicate, and collaborate.
+
+Common organizational models:
+
+* **Flat**: All agents are equal; suitable for small, simple systems.
+* **Hierarchical**: Tree-based authority; easier control but prone to bottlenecks or single points of failure.
+* **Holonic**: Agents are grouped into autonomous units (holons), each capable of cooperation and self-organization. Promotes scalability and flexibility.
+* **Hybrid**: Combines multiple models depending on the context and requirements.
+
+
+
+### 6. **Security and Trust**
+
+Security in MAS is especially challenging due to decentralization and agent mobility.
+
+* **Key Challenges**:
+
+  * A compromised mobile agent can propagate threats across the system.
+  * Dynamic membership makes authentication and access control harder.
+* **Essential Security Requirements**:
+
+  * **Authentication** – Verifying agent identity
+  * **Authorization** – Defining access permissions
+  * **Confidentiality** – Protecting data from unauthorized access
+  * **Integrity** – Ensuring data isn't tampered with
+  * **Non-repudiation** – Accountability for actions
+
+
+## Agent Communucation
