@@ -8,6 +8,9 @@ description: "A classical, foundational survey paper covering agent architecture
 image: /images/image1.png
 ---
 
+<img src="{{ '/poster/mass.png' | relative_url }}">
+
+
 # Multi-Agent Systems : MASs 
 
 <a href = "https://ieeexplore.ieee.org/document/8352646">Paper Link </a>
