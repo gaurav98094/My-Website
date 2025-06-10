@@ -21,7 +21,7 @@ image: /images/image1.png
 ## 📝 Abstract
 Multi-Agent Systems (MAS) involve autonomous agents working collaboratively to solve complex problems. These systems face challenges like coordination, communication, task allocation, and security. This paper gives a holistic view of all these aspects with theoretical and structural insights.
 
-
+<br>
 
 ## Introduction
 Distributed AI can be grouped into:
@@ -40,11 +40,13 @@ Distributed AI can be grouped into:
 
 The paper aims to be domain-agnostic and broadly applicable.
 
-
+<br>
 
 ## 🤖 What is an Agent?
 
-An **agent** is a flexible, autonomous entity situated in an environment. It:
+An **agent** is a flexible, autonomous entity situated in an environment. 
+
+It:
 
 * Perceives the environment through sensors.
 * Makes decisions based on goals and environmental feedback.
@@ -56,6 +58,8 @@ An **agent** is a flexible, autonomous entity situated in an environment. It:
 * **Determinism**: Predictability of actions’ outcomes.
 * **Dynamism**: Frequency and impact of environmental changes.
 * **Continuity**: Degree to which environment behaves in discrete vs. continuous manner.
+
+<br> 
 
 Agents use:
 
@@ -69,6 +73,7 @@ While agents can function alone, true MAS benefits emerge from **collaboration**
 <img src="{{ '/images/mass-1.png' | relative_url }}">
 
 
+---
 
 
 ## 🤝 Why Multi-Agent Systems?
@@ -110,6 +115,7 @@ MAS are characterized by:
 <img src="{{ '/images/mass-3.png' | relative_url }}">
 
 
+---
 
 ## 🚧 MAS Challenges
 
@@ -206,6 +212,7 @@ Security in MAS is especially challenging due to decentralization and agent mobi
   * **Integrity** – Ensuring data isn't tampered with
   * **Non-repudiation** – Accountability for actions
 
+--- 
 
 ## Summary
 
