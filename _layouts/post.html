@@ -133,7 +133,7 @@
           {% for h in headings offset:1 %}
             {% assign heading_html = h | split: '</h2>' | first %}
             {% assign heading_text = heading_html | split: '>' | last | strip_html | strip_newlines | strip %}
-            {% assign heading_text = heading_text | replace: '🧠', '' | replace: '🔍', '' | replace: '⚙️', '' | replace: '🧪', '' | replace: '📈', '' | replace: '❗', '' | replace: '🧩', '' | replace: '🧱', '' | replace: '📝', '' | replace: '🤖', '' | replace: '🤝','' %}
+            {% assign heading_text = heading_text | replace: '🧠', '' | replace: '🔍', '' | replace: '⚙️', '' | replace: '🧪', '' | replace: '📈', '' | replace: '❗', '' | replace: '🧩', '' | replace: '🧱', '' | replace: '📝', '' | replace: '🤖', '' | replace: '🤝',''  | replace: '🚧','' %}
             {% if heading_text != '' %}
               <li><a href="#{{ heading_text | slugify }}">{{ heading_text }}</a></li>
             {% endif %}

@@ -3,7 +3,7 @@ layout: post
 title: "A Survey of Multi-Agent Systems"
 date: 2025-06-05
 categories: papers
-tags: [agents]
+tags: [software, agents, framework]
 description: "A classical, foundational survey paper covering agent architectures, cooperation, competition, and communication in MAS"
 image: /images/image1.png
 ---
@@ -18,7 +18,7 @@ image: /images/image1.png
 ## 📝 Abstract
 Multi-Agent Systems (MAS) involve autonomous agents working collaboratively to solve complex problems. These systems face challenges like coordination, communication, task allocation, and security. This paper gives a holistic view of all these aspects with theoretical and structural insights.
 
----
+
 
 ## Introduction
 Distributed AI can be grouped into:
@@ -37,7 +37,7 @@ Distributed AI can be grouped into:
 
 The paper aims to be domain-agnostic and broadly applicable.
 
----
+
 
 ## 🤖 What is an Agent?
 
@@ -65,7 +65,7 @@ While agents can function alone, true MAS benefits emerge from **collaboration**
 
 <img src="{{ '/images/mass-1.png' | relative_url }}">
 
----
+
 
 
 ## 🤝 Why Multi-Agent Systems?
@@ -101,6 +101,53 @@ MAS are characterized by:
 - **Data Transmission Frequency** : Agents transmit data periodically (time-triggered) or only upon specific events (event-triggered).
 
 - **Mobility** : Agents can be stationary or capable of moving within and interacting across the environment.
+
+## Differentiating MAS
+
+<img src="{{ '/images/mass-3.png' | relative_url }}">
+
+
+
+## 🚧 MAS Challenges
+
+### 1. **Coordination and Control**
+
+In a Multi-Agent System (MAS), each agent’s actions influence the environment, thereby affecting the decisions of other agents. Effective coordination is crucial for collaboratively achieving system-wide goals.
+
+Key coordination challenges include:
+
+* **Consensus**
+  Achieving a global agreement among agents on a shared variable or feature of interest. Essential for coordinated decisions and actions.
+
+* **Controllability**
+  Refers to the ability to steer the MAS from one state to another through regulatory inputs. The degree of system dynamism (e.g., agent mobility, changing environments) influences controllability.
+  Common strategy: Use of a centralized leader or controller to guide other agents toward a shared goal.
+
+* **Synchronization**
+  Ensuring that actions of agents are aligned temporally—i.e., they act at the right time in harmony. This is often interdependent with consensus, especially in time-sensitive applications like swarm robotics.
+
+* **Connectivity**
+  Agents need reliable and consistent communication links.
+  Major challenges:
+
+  * Mobility of agents (e.g., in drone swarms or vehicular networks)
+  * Noisy or lossy communication environments
+  * Partial or incomplete knowledge of the network topology
+
+* **Formation**
+  Designing and maintaining an optimal spatial or logical structure among agents. This includes:
+
+  * Defining desired formations (e.g., flocking, grid, or leader-follower patterns)
+  * Preserving formation under dynamic conditions
+
+
+
+### 2. **Agent Learning**
+
+Agents should be capable of perceiving the environment, learning from interactions, and adapting their behaviors over time.
+
+* Use of algorithms like Reinforcement Learning (RL), Evolutionary Algorithms, or Genetic Programming.
+* Agents can share learned knowledge with neighbors to improve collective performance and reduce redundant learning or negative externalities.
 
 
 
@@ -157,4 +204,17 @@ Security in MAS is especially challenging due to decentralization and agent mobi
   * **Non-repudiation** – Accountability for actions
 
 
-## Agent Communucation
+## Summary
+
+* MAS = multiple autonomous agents working together (or competing) to solve complex problems.
+* Key benefits: **efficiency**, **flexibility**, **reliability**, and **scalability**.
+* Agents perceive, decide, and act based on goals and environment.
+* MAS challenges include:
+
+  * **Coordination** (consensus, synchronization, controllability)
+  * **Learning** (via RL or evolution)
+  * **Task allocation** (centralized or decentralized)
+  * **Fault tolerance** and **robustness**
+  * **Security & trust** (authentication, integrity, etc.)
+* Organizational models: **flat**, **hierarchical**, **holonic**, **hybrid**.
+* MAS enable distributed problem-solving beyond traditional single-agent systems.
