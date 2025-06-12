@@ -13,21 +13,17 @@ image: /images/image1.png
 
 
 
-Here's a cleaned-up and professionally formatted `README.md` for your project. I've preserved your structure but improved clarity, grammar, and added missing context where needed.
-
----
-
 # Neural Machine Translation of Rare Words with Subword Units
 
 🔗 [**Original Paper (Sennrich et al., 2015)**](https://arxiv.org/pdf/1508.07909)
 
-## 🧠 Hypothesis
+## Hypothesis
 
 Segmentation of rare words into appropriate **subword units** is sufficient to allow a neural translation model to learn transparent translations, even for **unseen or rare words**.
 
 
 
-## 📝 Abstract 
+## Abstract 
 
 * Traditional NMT models struggle with rare or out-of-vocabulary (OOV) words due to limited vocabulary size (typically 30k–50k).
 * Prior solutions back off to dictionary lookups, which are brittle and language-dependent.
@@ -36,7 +32,7 @@ Segmentation of rare words into appropriate **subword units** is sufficient to a
 
 
 
-## 📌 Introduction
+## Introduction
 
 * Rare word translation remains a central challenge in NMT.
 * Most neural models operate with a limited vocabulary (e.g., 30k-50k word tokens).
@@ -150,7 +146,7 @@ def learn_bpe(corpus, target_vocab_size):
 final_vocab, merges = learn_bpe(corpus, target_vocab_size=100)
 
 # Show results
-print("\n✅ Final Subword Vocabulary:")
+print("\n Final Subword Vocabulary:")
 print(sorted(final_vocab))
 print(f"\nTotal tokens: {len(final_vocab)}")
 ```
