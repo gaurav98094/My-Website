@@ -54,7 +54,7 @@ Segmentation of rare words into appropriate **subword units** is sufficient to a
 * Translating subwords individually can enable better understanding of compound and rare words.
 * **Example**:
 
-  * German `Sonnensystem` → `Sonne` (sun) + `System` (system)
+  * German **Sonnensystem** → **Sonne** (sun) + **System** (system)
 * The model learns to translate each segment, enabling it to:
 
   * Generalize to new word forms
