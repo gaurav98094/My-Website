@@ -3,7 +3,7 @@ layout: post
 title: "Tokenizers in LLMs"
 date: 2025-06-12
 categories: blog
-tags: [llm]
+tags: [tokenizer]
 description: "Tokenizer breaks down text into smaller units, called tokens, which can be words, subwords, or even individual characters"
 ---
 
