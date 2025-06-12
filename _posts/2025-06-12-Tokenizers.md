@@ -29,6 +29,8 @@ There are three common types of tokenization strategies:
 
 <br>
 
+--
+
 
 ## 🔍 Subword Tokenizers Overview
 
@@ -44,12 +46,13 @@ Subword tokenizers sit between character-level and word-level tokenizers, breaki
 
 <br>
 
+--
 
 ## 🔧 Byte-Pair Encoding (BPE) – In Depth
 
 ### 🧪 How It Works
 
-1. **Start with a character-level vocabulary**: e.g., `['e', 'x', 'a', 'm', 'p', 'l', 'e']`
+1. **Start with a character-level vocabulary**: e.g., `**'e', 'x', 'a', 'm', 'p', 'l', 'e']**
 2. **Count frequent adjacent pairs** across your training corpus.
 3. **Merge** the most frequent pair into a new token.
 4. **Repeat** until a vocabulary size limit is reached.
@@ -68,9 +71,9 @@ low low lower newest widest
 l o w   l o w   l o w e r   n e w e s t   w i d e s t
 ```
 
-**Count most frequent pairs** (e.g., `l o`, `o w`, `e s`...).
+**Count most frequent pairs** (e.g., **l o**, **o w**, **e s**...).
 
-Suppose `l o` is the most frequent → Merge → `lo`
+Suppose **l o** is the most frequent → Merge → **lo**
 
 Update all texts:
 
@@ -78,7 +81,7 @@ Update all texts:
 lo w   lo w   lo w e r   n e w e s t   w i d e s t
 ```
 
-Repeat merging like: `lo` + `w` → `low`, `low` + `e` → `lowe`, ...
+Repeat merging like: **lo** + **w** → **ow**, **low** + **e** → **lowe**, ...
 
 Final learned subword vocabulary might include:
 
@@ -90,7 +93,7 @@ Final learned subword vocabulary might include:
 
 ### 🧰 Inference (Tokenization at Test Time)
 
-Let’s tokenize the word `lowering`.
+Let’s tokenize the word **lowering**.
 
 Step-by-step:
 
@@ -100,13 +103,13 @@ Step-by-step:
 lowering → low + er + ing (if in vocab)
 ```
 
-If `lower` is in the vocabulary but `lowering` is not, then:
+If **lower** is in the vocabulary but **lowering** is not, then:
 
 ```
 lowering → lower + ing
 ```
 
-If `lower`, `ing` aren't in vocab, fallback might be:
+If **lower**, **ing** aren't in vocab, fallback might be:
 
 ```
 lowering → l + o + w + e + r + i + n + g
@@ -116,6 +119,8 @@ So **granularity depends on the training data and merges**.
 
 
 <br>
+
+--
 
 ## 🤖 WordPiece – A Smarter Variation
 
@@ -147,7 +152,7 @@ Then WordPiece tokenizes as:
 
 ### ⚠️ Special Notation:
 
-* WordPiece uses `##` to mark that a token is a **suffix** (i.e., not the start of a word).
+* WordPiece uses **##** to mark that a token is a **suffix** (i.e., not the start of a word).
 * Helps preserve word boundaries for downstream models.
 
 ---
@@ -156,10 +161,14 @@ Then WordPiece tokenizes as:
 
 <img src="{{ '/images/tokenizer_p2.png' | relative_url }}">
 
+--
+
 ## 🏁 Summary
 
 ✅ Tokenization is the **gateway** to building any NLP model.
+
 ✅ Subword tokenization helps handle vocabulary diversity and OOV (out-of-vocabulary) words.
+
 ✅ BPE and WordPiece are the most popular subword strategies, each with its own advantages.
 
 
