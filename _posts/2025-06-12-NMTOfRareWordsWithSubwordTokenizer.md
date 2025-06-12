@@ -138,7 +138,8 @@ def learn_bpe(corpus, target_vocab_size):
         new_token = ''.join(best_pair)
         token_set.add(new_token)
         vocab = merge_vocab(best_pair, vocab)
-        print(f"Merged {best_pair} → {new_token} | Vocab size: {len(token_set)}")
+        print(f"Merged {best_pair} → {new_token}")
+        print(f"Vocab size: {len(token_set)}")
 
     return token_set, merges
 
