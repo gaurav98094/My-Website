@@ -48,7 +48,7 @@ Subword tokenizers sit between character-level and word-level tokenizers, breaki
 
 ---
 
-## 🔧 Byte-Pair Encoding (BPE) – In Depth
+## Byte-Pair Encoding (BPE) – In Depth
 
 ### How It Works
 
@@ -163,7 +163,7 @@ Then WordPiece tokenizes as:
 
 ---
 
-## 🏁 Summary
+## Summary
 
 - Tokenization is the **gateway** to building any NLP model.
 
@@ -173,7 +173,7 @@ Then WordPiece tokenizes as:
 
 
 
-## 🚀 Want to Try It Yourself?
+## Want to Try It Yourself?
 
 Try tokenizing with Hugging Face’s tokenizer API:
 
