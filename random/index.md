@@ -12,7 +12,7 @@ permalink: /blogs/
 <ul>
   {% if site.categories.blog %}
     {% assign blog_posts = site.categories.blog | sort: 'date' | reverse %}
-    {% for post in blog_posts limit:5 %}
+    {% for post in blog_posts %}
       <li>
         <a href="{{ post.url | relative_url }}" class="list-title">{{ post.title }}</a>
         <span class="list-date">{{ post.date | date: "%b %d, %Y" }}</span>
