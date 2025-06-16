@@ -10,7 +10,7 @@ permalink: /papers/
 
 <ul>
   {% assign paper_posts = site.categories.papers | sort: 'date' | reverse %}
-  {% for post in paper_posts limit:5 %}
+  {% for post in paper_posts %}
     <li>
       <a href="{{ post.url | relative_url }}" class="list-title">{{ post.title }}</a>
       <span class="list-date">{{ post.date | date: "%b %d, %Y" }}</span>
