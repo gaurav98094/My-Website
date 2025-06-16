@@ -3,8 +3,8 @@ layout: post
 title: "Attention Is All You Need"
 date: 2025-05-29
 categories: papers
-tags: [transformers, attention, deep-learning, nlp]
-description: "A summary and explanation of the Transformer architecture and its impact on deep learning."
+tags: [llm]
+description: "Paper on Transformer"
 image: /images/image1.png
 ---
 
