@@ -3,7 +3,7 @@ layout: post
 title: "A Survey of Multi-Agent Systems"
 date: 2025-06-05
 categories: papers
-tags: [software, agents, framework]
+tags: [agents]
 description: "A classical, foundational survey paper covering agent architectures, cooperation, competition, and communication in MAS"
 image: /images/image1.png
 ---

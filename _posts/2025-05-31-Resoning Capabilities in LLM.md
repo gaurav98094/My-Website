@@ -3,7 +3,7 @@ layout: post
 title: "Reasoning Capabilities in Large Language Models"
 date: 2025-05-31
 categories: papers
-tags: [llm, reasoning, chain-of-thought, prompt-engineering]
+tags: [llm, prompting]
 description: "Exploring the reasoning and planning abilities of large language models in dynamic environments."
 image: /images/image3.png
 ---
