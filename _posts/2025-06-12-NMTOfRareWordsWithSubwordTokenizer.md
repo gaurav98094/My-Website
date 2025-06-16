@@ -68,8 +68,8 @@ Segmentation of rare words into appropriate **subword units** is sufficient to a
 * This paper adapts it to merge the most frequent **character pairs** in text.
 * This results in a variable-length subword vocabulary where:
 
-  * Common words remain whole (`the`, `and`)
-  * Rare words are segmented into common subunits (`un`, `break`, `able` → `unbreakable`)
+  * Common words remain whole (the, and)
+  * Rare words are segmented into common subunits (un, break, able → unbreakable)
 
 <img src="{{ '/images/tokenizer/image1.png' | relative_url }}" alt="BPE process">
 
