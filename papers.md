@@ -6,8 +6,6 @@ permalink: /papers/
 
 # Papershelf
 
-<p>I read a few papers every week around various topics that interest me. Here are the most recent ones I've summarized.</p>
-
 <div class="tag-filter">
   <div class="tag-filter-header">Filter by topic:</div>
   <div class="tag-buttons">
