@@ -36,7 +36,7 @@ defaults:
       type: "posts"
     values:
       layout: post
-      # categories: papers
+      categories: papers
 
 # Custom CSS include
 include:
