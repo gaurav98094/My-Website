@@ -12,8 +12,8 @@ permalink: /papers/
   <div class="tag-filter-header">Filter by topic:</div>
   <div class="tag-buttons">
     <button class="tag-button active" data-tag="all">All</button>
-    {% assign all_tags = site.categories.papers | map: "tags" | uniq | sort %}
-    {% for tag in all_tags %}
+    {% assign paper_tags = site.categories.papers | map: "tags" | uniq | sort %}
+    {% for tag in paper_tags %}
       <button class="tag-button" data-tag="{{ tag }}">{{ tag }}</button>
     {% endfor %}
   </div>
