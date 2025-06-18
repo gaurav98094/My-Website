@@ -147,3 +147,9 @@ Answer: 12
 
 
 <img src="{{ '/images/promptengineering/image8.png' | relative_url }}">
+
+
+
+
+## References
+* <a href="https://www.promptingguide.ai/">Prompt Engineering Guide</a>
