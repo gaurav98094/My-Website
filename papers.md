@@ -32,6 +32,16 @@ permalink: /papers/
 </ul>
 
 <style>
+/* H2 heading styling */
+h2 {
+  color: #7c3aed !important;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 .tag-filter {
   margin: 2rem 0;
   padding: 1rem;
