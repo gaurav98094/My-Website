@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tokenizers in LLMs"
+title: "Prompt Engineering Guide"
 date: 2025-06-18
 categories: blog
 tags: [prompting]
@@ -138,3 +138,12 @@ Answer: 12
 
 <img src="{{ '/images/promptengineering/image7.png' | relative_url }}">
 
+
+## Tree of THought
+
+*  Maintains tree of thoughts, where thoughts represent coherent language sequence.
+* Enables an LM to self-evaluate the progress through intermediate thoughts made towards solving a problem through a deliberate reasoning process.
+* Comes from the idea of graph BFS i.e compare branches.
+
+
+<img src="{{ '/images/promptengineering/image8.png' | relative_url }}">
