@@ -2,7 +2,7 @@
 layout: post
 title: "Neural Machine Translation of Rare Words with Subword Units"
 date: 2025-06-12
-categories: papers
+categories: [papers]
 tags: [tokenizer]
 description: "Neural machine translation (NMT) models typically operate with a fixed vocabulary, but translation is an open-vocabulary
 problem."

@@ -2,7 +2,7 @@
 layout: post
 title: "Reasoning Capabilities in Large Language Models"
 date: 2025-05-31
-categories: papers
+categories: [papers]
 tags: [llm, prompting]
 description: "Exploring the reasoning and planning abilities of large language models in dynamic environments."
 image: /images/image3.png

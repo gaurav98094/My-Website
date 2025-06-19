@@ -2,7 +2,7 @@
 layout: post
 title: "Prompt Engineering Guide"
 date: 2025-06-18
-categories: blog
+categories: [blog]
 tags: [prompting]
 description: "Prompt engineering is a relatively new discipline for developing and optimizing prompts to efficiently use language models"
 ---

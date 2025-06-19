@@ -2,7 +2,7 @@
 layout: post
 title: "Async IO in Python: A Complete Walkthrough"
 date: 2025-06-01
-categories: blog
+categories: [blog]
 tags: [python]
 description: "Async IO allows you to run code that waits (like for file or network operations) without blocking other tasks, enabling concurrent execution in a single thread using async and await."
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: "Attention Is All You Need"
 date: 2025-05-29
-categories: papers
+categories: [papers]
 tags: [llm]
 description: "Paper on Transformer"
 image: /images/image1.png
