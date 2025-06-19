@@ -6,12 +6,22 @@ permalink: /papers/
 
 # Papershelf
 
+<p>I read a few papers every week around various topics that interest me. Here are the most recent ones I've summarized.</p>
+
 <div class="tag-filter">
   <div class="tag-filter-header">Filter by topic:</div>
   <div class="tag-buttons">
     <button class="tag-button active" data-tag="all">All</button>
-    {% assign paper_posts = site.categories.papers %}
-    {% assign paper_tags = paper_posts | map: "tags" | uniq | sort %}
+    {% assign paper_posts = site.posts | where_exp: "post", "post.categories contains 'papers'" %}
+    {% assign paper_tags = "" | split: "" %}
+    {% for post in paper_posts %}
+      {% for tag in post.tags %}
+        {% unless paper_tags contains tag %}
+          {% assign paper_tags = paper_tags | push: tag %}
+        {% endunless %}
+      {% endfor %}
+    {% endfor %}
+    {% assign paper_tags = paper_tags | sort %}
     {% for tag in paper_tags %}
       <button class="tag-button" data-tag="{{ tag }}">{{ tag }}</button>
     {% endfor %}
@@ -19,7 +29,6 @@ permalink: /papers/
 </div>
 
 <ul class="paper-list">
-  {% assign paper_posts = site.categories.papers | sort: 'date' | reverse %}
   {% for post in paper_posts %}
     <li class="paper-item" data-tags="{{ post.tags | join: ' ' }}">
       <a href="{{ post.url | relative_url }}" class="list-title">{{ post.title }}</a>
