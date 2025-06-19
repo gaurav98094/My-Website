@@ -139,7 +139,7 @@ Answer: 12
 <img src="{{ '/images/promptengineering/image7.png' | relative_url }}">
 
 
-## Tree of THought
+## Tree of Thought
 
 *  Maintains tree of thoughts, where thoughts represent coherent language sequence.
 * Enables an LM to self-evaluate the progress through intermediate thoughts made towards solving a problem through a deliberate reasoning process.
@@ -148,8 +148,28 @@ Answer: 12
 
 <img src="{{ '/images/promptengineering/image8.png' | relative_url }}">
 
+## Automatic Reasoning & Tool Use (ART)
+
+* Combine CoT prompting and tool in interleaved manner.
+
+ART works as follows:
+* Given a task, selects a multi-step reasoning and tool use from task library.
+* It pauses generation whenever external tools are called and integrate their output before resuming generation
+
+<img src="{{ '/images/promptengineering/image9.png' | relative_url }}">
+
+## ReAct Prompting
+
+* LLMs are used to generate both reasoning traces and task-specific actions in interleaved manner.
+* Generating traces helps model to induce, track and update action plans.
+* ReAct impoves human intrepretability and trustworthiness of LLM.
+
+<a href="https://gaurav98094.github.io/My-Website/papers/2025/06/09/REACT.html">Read In Detail</a>
 
 
 
 ## References
 * <a href="https://www.promptingguide.ai/">Prompt Engineering Guide</a>
+* <a href="https://arxiv.org/pdf/2109.01652">Finetuned LM are Zero Shot Learners</a>
+* <a href="https://arxiv.org/abs/2305.10601">Tree Of Thoughts</a>
+* <a href="https://arxiv.org/abs/2210.03629">ReAct</a>
