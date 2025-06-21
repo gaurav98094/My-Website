@@ -13,7 +13,7 @@ image: /images/image1.png
 
 # FineTuned Language Models Are Zero-Shot Learners
 
-🔗 [**Original Paper (Sennrich et al., 2015)**](https://arxiv.org/pdf/2109.01652)
+🔗 [**Original Paper**](https://arxiv.org/pdf/2109.01652)
 
 
 ## Abstract
