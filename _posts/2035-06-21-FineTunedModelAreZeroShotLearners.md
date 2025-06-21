@@ -30,11 +30,14 @@ image: /images/image1.png
 * Motivates converting tasks into **natural‑language instruction templates** (e.g., “Translate: ...”, “Is it positive or negative?”).
 * Presents the concept of **instruction tuning** to align LMs with human-style instructions.
 
+<img src="{{ '/images/flan/image1.png' | relative_url }}">
 
 ## Model Architecture
 
 * Uses a **decoder-only Transformer** model (~137B params), pretrained on diverse data (web text, code, dialogue, multilingual).
 * The base model (“LaMDA‑PT”) is similar in scale to GPT‑3, but with different pretraining corpora.
+
+<img src="{{ '/images/flan/image2.png' | relative_url }}">
 
 
 ## Instruction Tuning (FLAN)
@@ -42,6 +45,8 @@ image: /images/image1.png
 * Aggregates 62 datasets from TensorFlow Datasets across **12 task clusters** (e.g., translation, NLI, commonsense, reading comprehension).
 * Converts each dataset into **instruction‑input → output** pairs using 10 templates per dataset cluster.
 * Finetunes with up to 30,000 examples per dataset, balanced via proportional mixing and gradient updates (total ~30k steps).
+
+<img src="{{ '/images/flan/image3.png' | relative_url }}">
 
 
 ## Evaluation & Results
@@ -54,14 +59,32 @@ image: /images/image1.png
   * Outperforms few‑shot GPT‑3 on key benchmarks such as ANLI, RTE, BoolQ, AI2‑ARC, OpenBookQA, StoryCloze.
   * Benefits consistent across task clusters: NLI, QA types, etc.
 
+<img src="{{ '/images/flan/image4.png' | relative_url }}">
+
 
 ## Ablation Studies
 
 * **Scale Effect**: models of 422M, 2B, 8B, 68B, 137B params tested. Instruction tuning yields significant gains primarily at larger scales (≥8B–137B).
+
+<img src="{{ '/images/flan/image6.png' | relative_url }}">
+
 * **Task diversity**: increasing number of tuning tasks improves zero‑shot performance on unseen tasks.
+
+<img src="{{ '/images/flan/image5.png' | relative_url }}">
+
 * **Instruction necessity**: removing templates or replacing them with dataset names degrades performance significantly.
+
+<img src="{{ '/images/flan/image7.png' | relative_url }}">
+
 * **Few‑shot exemplar augmentation**: adding a few examples within instructions further boosts performance and stabilizes results.
+
+<img src="{{ '/images/flan/image8.png' | relative_url }}">
+
+
 * **Prompt tuning compatibility**: FLAN serves as a better base for continuous prompt tuning, achieving strong performance with few labeled examples .
+
+<img src="{{ '/images/flan/image9.png' | relative_url }}">
+
 
 
 
