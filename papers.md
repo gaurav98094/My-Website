@@ -12,7 +12,7 @@ permalink: /papers/
   <div class="tag-filter-header">Filter by topic:</div>
   <div class="tag-buttons">
     <button class="tag-button active" data-tag="all">All</button>
-    {% assign paper_posts = site.posts | where_exp: "post", "post.categories contains 'papers'" %}
+    {% assign paper_posts = site.posts | where_exp: "post", "post.categories.size == 1 and post.categories[0] == 'papers'" %}
     {% assign paper_tags = "" | split: "" %}
     {% for post in paper_posts %}
       {% for tag in post.tags %}
